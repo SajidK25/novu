@@ -65,7 +65,7 @@ services:
       API_CONTEXT_PATH: ${API_CONTEXT_PATH}
       IS_MULTI_TENANCY_ENABLED: ${IS_MULTI_TENANCY_ENABLED}
     ports:
-      - '3000:3000'
+      - '3009:3000'
   worker:
     image: 'ghcr.io/novuhq/novu/worker:0.24.0'
     depends_on:
@@ -125,7 +125,7 @@ services:
       NEW_RELIC_APP_NAME: ${NEW_RELIC_APP_NAME}
       NEW_RELIC_LICENSE_KEY: ${NEW_RELIC_LICENSE_KEY}
     ports:
-      - '3002:3002'
+      - '3010:3002'
   web:
     image: 'ghcr.io/novuhq/novu/web:0.24.0'
     depends_on:
