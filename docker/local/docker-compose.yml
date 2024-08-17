@@ -4,7 +4,7 @@ services:
   localstack:
     container_name: "${LOCALSTACK_DOCKER_NAME-localstack_main}"
     image: "localstack/localstack:0.14.5"
-    network_mode: bridge
+    #network_mode: bridge
     environment:
       - SERVICES=s3
     ports:
@@ -19,7 +19,7 @@ services:
   mongo:
     container_name: "${MONGO_DOCKER_NAME-mongo_main}"
     image: mongo
-    network_mode: bridge
+    #network_mode: bridge
     ports:
       - "${DOCKER_MONGO_PORT:-27017}:27017"
     volumes:
@@ -31,7 +31,7 @@ services:
   redis:
     container_name: "${REDIS_DOCKER_NAME-redis_main}"
     image: redis
-    network_mode: bridge
+    #network_mode: bridge
     ports:
       - "${DOCKER_REDIS_SERVICE_PORT:-6379}:6379"
     healthcheck:
